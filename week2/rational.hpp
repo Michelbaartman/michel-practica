@@ -1,8 +1,18 @@
+/* --------------------------- */
+//  Michel Baartman
+//  1696929
+//  Jorn Bunk
+//  Week 2 Opdracht 19.2.2 & 19.2.3
+/* --------------------------- */
+
 #ifndef RATIONAL_HPP
 #define RATIONAL_HPP
 
 #include <iostream>
+#include <iomanip>
 /// @file
+
+// gemaakt tijdens de les met Nick Bout
 
 /// \brief
 /// rational ADT
@@ -69,8 +79,8 @@ public:
    /// decimal values.
    friend std::ostream & operator<<( std::ostream & lhs, const rational & rhs ){
       // rational temp = rhs.reduce();
-      std::cout << "counter (hexdecimal)    : " << std::hex << rhs.counter << "\n";
-      std::cout << "denominator (hexdecimal): " << std::hex << rhs.denominator << "\n";
+      //std::cout << "counter (hexdecimal)    : " << std::hex << rhs.counter << "\n";
+      //std::cout << "denominator (hexdecimal): " << std::hex << rhs.denominator << "\n";
       return lhs 
          << "[" 
          << rhs.counter 
@@ -78,9 +88,10 @@ public:
          << rhs.denominator
          << "]"
          << "["
-         << std::hex << rhs.counter
-         << "/"
-         << std::hex << rhs.denominator
+         << "0x" << std::setfill('0') << std::setw(4) << std::hex << std::uppercase
+         << rhs.counter
+         << "/0x" << std::setfill('0') << std::setw(4)
+         << rhs.denominator
          << "]";
    }   
    

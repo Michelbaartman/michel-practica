@@ -1,5 +1,13 @@
+/* --------------------------- */
+//  Michel Baartman
+//  1696929
+//  Jorn Bunk
+//  Week 2 Opdracht 19.2.2 & 19.2.3
+/* --------------------------- */
+
 #include "ostream"
 #include "rational.hpp"
+#include "vector.hpp"
 
 // needed to get Catch working with MinGW
 #define TWOBLUECUBES_CATCH_REPORTER_JUNIT_HPP_INCLUDED
@@ -106,8 +114,42 @@ TEST_CASE( "multiply rational into rational; return value" ){
    REQUIRE( x == rational( 3, 20 ) );     
 }
 
+// vector class tests
 
+TEST_CASE( "constructor, string (<<)" ){
+   vector v(5, 2);
+   std::stringstream s;
+   s << v;
+   REQUIRE( s.str() == "[x5, y2]" );   
+}
 
+TEST_CASE( "equal check (==)" ){
+    vector v(2, 4);
+   REQUIRE( v == vector(2, 4) );   
+}
 
+TEST_CASE( "add (+)" ){
+    vector v1(2, 4);
+    v1 = v1 + v1;
+   REQUIRE( v1 == vector(4, 8) );   
+}
 
+TEST_CASE( "add part II (+=)" ){
+    vector v1(2, 4);
+    vector v2(3, 5);
+    v1 += v2;
+   REQUIRE( v1 == vector(5, 9) );   
+}
+
+TEST_CASE( "multiply (*)" ){
+    vector v1(2, 4);
+    v1 = v1 * 2;
+   REQUIRE( v1 == vector(4, 8) );   
+}
+
+TEST_CASE( "multiply part II (*=)" ){
+    vector v1(2, 4);
+    v1 *= 2;
+   REQUIRE( v1 == vector(4, 8) );   
+}
 
