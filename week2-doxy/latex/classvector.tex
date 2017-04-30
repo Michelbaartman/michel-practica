@@ -1,0 +1,121 @@
+\hypertarget{classvector}{}\section{vector Class Reference}
+\label{classvector}\index{vector@{vector}}
+
+
+vector class  
+
+
+
+
+{\ttfamily \#include $<$vector.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classvector_ada69c108ec9393e6f70bdfcd58366cbf}{vector} (int x=0, int y=0)
+\begin{DoxyCompactList}\small\item\em constructor from integer values \end{DoxyCompactList}\item 
+bool \hyperlink{classvector_a0066b879f704f7d344ec9cd2a2f57ea3}{operator==} (const \hyperlink{classvector}{vector} \&rhs) const
+\begin{DoxyCompactList}\small\item\em compare operator for vectors \end{DoxyCompactList}\item 
+\hyperlink{classvector}{vector} \hyperlink{classvector_a215519ce92bacbbefd0e6cc1e985ace7}{operator+} (const \hyperlink{classvector}{vector} \&rhs)
+\begin{DoxyCompactList}\small\item\em add operator for vectors \end{DoxyCompactList}\item 
+\hyperlink{classvector}{vector} \& \hyperlink{classvector_acf4c6a4d343c92e211f80de7712a3cac}{operator+=} (const \hyperlink{classvector}{vector} \&rhs)
+\begin{DoxyCompactList}\small\item\em extended add operator for vectors \end{DoxyCompactList}\item 
+\hyperlink{classvector}{vector} \hyperlink{classvector_ac4cc1a334af3576736c08768329dd886}{operator$\ast$} (const int \&rhs)
+\begin{DoxyCompactList}\small\item\em multiply operator for vectors \end{DoxyCompactList}\item 
+\hyperlink{classvector}{vector} \& \hyperlink{classvector_af770ce4b87b6b76ae1bbc2393013f3d5}{operator$\ast$=} (const int \&rhs)
+\begin{DoxyCompactList}\small\item\em extended mutiply operator for vectors \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \hyperlink{classvector_a7a6813f75dabd6f9575f9d6f91890255}{operator$<$$<$} (std\+::ostream \&lhs, const \hyperlink{classvector}{vector} \&rhs)
+\begin{DoxyCompactList}\small\item\em output operator for vector \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+vector class 
+
+this is a vector class that stores 2 values\+: x and y. both of these values are stored as int. They are often used as co-\/ordinates. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classvector_ada69c108ec9393e6f70bdfcd58366cbf}\label{classvector_ada69c108ec9393e6f70bdfcd58366cbf}} 
+\index{vector@{vector}!vector@{vector}}
+\index{vector@{vector}!vector@{vector}}
+\subsubsection{\texorpdfstring{vector()}{vector()}}
+{\footnotesize\ttfamily vector\+::vector (\begin{DoxyParamCaption}\item[{int}]{x = {\ttfamily 0},  }\item[{int}]{y = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+constructor from integer values 
+
+Constructor that initializes a vector containing 2 int values Default values are 0 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classvector_ac4cc1a334af3576736c08768329dd886}\label{classvector_ac4cc1a334af3576736c08768329dd886}} 
+\index{vector@{vector}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!vector@{vector}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily \hyperlink{classvector}{vector} vector\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const int \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+multiply operator for vectors 
+
+multiplies vector by a given integer value, then returns a temp vector with the new values. \mbox{\Hypertarget{classvector_af770ce4b87b6b76ae1bbc2393013f3d5}\label{classvector_af770ce4b87b6b76ae1bbc2393013f3d5}} 
+\index{vector@{vector}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!vector@{vector}}
+\subsubsection{\texorpdfstring{operator$\ast$=()}{operator*=()}}
+{\footnotesize\ttfamily \hyperlink{classvector}{vector}\& vector\+::operator$\ast$= (\begin{DoxyParamCaption}\item[{const int \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+extended mutiply operator for vectors 
+
+multiplies current vector with given integer. \mbox{\Hypertarget{classvector_a215519ce92bacbbefd0e6cc1e985ace7}\label{classvector_a215519ce92bacbbefd0e6cc1e985ace7}} 
+\index{vector@{vector}!operator+@{operator+}}
+\index{operator+@{operator+}!vector@{vector}}
+\subsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \hyperlink{classvector}{vector} vector\+::operator+ (\begin{DoxyParamCaption}\item[{const \hyperlink{classvector}{vector} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+add operator for vectors 
+
+counts 2 vectors together, then returns a new vector with the new values. \mbox{\Hypertarget{classvector_acf4c6a4d343c92e211f80de7712a3cac}\label{classvector_acf4c6a4d343c92e211f80de7712a3cac}} 
+\index{vector@{vector}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!vector@{vector}}
+\subsubsection{\texorpdfstring{operator+=()}{operator+=()}}
+{\footnotesize\ttfamily \hyperlink{classvector}{vector}\& vector\+::operator+= (\begin{DoxyParamCaption}\item[{const \hyperlink{classvector}{vector} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+extended add operator for vectors 
+
+adds the rhs vector values to the lhs vector. \mbox{\Hypertarget{classvector_a0066b879f704f7d344ec9cd2a2f57ea3}\label{classvector_a0066b879f704f7d344ec9cd2a2f57ea3}} 
+\index{vector@{vector}!operator==@{operator==}}
+\index{operator==@{operator==}!vector@{vector}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool vector\+::operator== (\begin{DoxyParamCaption}\item[{const \hyperlink{classvector}{vector} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+compare operator for vectors 
+
+checks if both vector values are equal, and returns either a true or false 
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classvector_a7a6813f75dabd6f9575f9d6f91890255}\label{classvector_a7a6813f75dabd6f9575f9d6f91890255}} 
+\index{vector@{vector}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!vector@{vector}}
+\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{lhs,  }\item[{const \hyperlink{classvector}{vector} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+output operator for vector 
+
+This operator$<$$<$ prints a constructor in the format \mbox{[}xx ,yy\mbox{]} where both values are printed as integer values. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{vector_8hpp}{vector.\+hpp}\item 
+vector.\+cpp\end{DoxyCompactItemize}

@@ -10,37 +10,35 @@
 
 #include <iostream>
 #include <iomanip>
-/* @file */
+/// @file
 
-/* \brief
- * vector class
- * \details
- * this is a vector class that stores 2 values: x and y.
- * both of these values are stored as int.
- * They are often used as co-ordinates.
- */
+/// \brief
+/// vector class
+/// \details
+/// this is a vector class that stores 2 values: x and y.
+/// both of these values are stored as int.
+/// They are often used as co-ordinates.
 class vector
 {
 private:
     int x, y;
 
 public:
-    /* \brief
-     * constructor from integer values
-     * \details
-     * Constructor that initializes a vector containing 2 int values
-     * Default values are 0
-     */
+    /// \brief
+    /// constructor from integer values
+    /// \details
+    /// Constructor that initializes a vector containing 2 int values
+    /// Default values are 0
     vector( int x = 0, int y = 0 ):
         x(x), y(y)
     {}
     
-    /* \brief
-     * output operator for vector
-     * \details
-     * This operator<< prints a constructor in the format
-     * [xx ,yy] where both values are printed as integer values.
-     */
+    /** \brief
+     ** output operator for vector
+     ** \details
+     ** This operator<< prints a constructor in the format
+     ** [xx ,yy] where both values are printed as integer values.
+     **/
     friend std::ostream & operator<<( std::ostream & lhs, const vector & rhs ){
         return lhs 
          << "[x" 
@@ -50,53 +48,53 @@ public:
          << "]";
     }   
     
-    /* \brief
-     * compare operator for vectors
-     * \details
-     * checks if both vector values are equal, and returns either a true or false
-     */
+    /** \brief
+     ** compare operator for vectors
+     ** \details
+     ** checks if both vector values are equal, and returns either a true or false
+     **/
    bool operator==( const vector & rhs ) const {
         vector temp(x, y);
         vector rhsTemp(rhs.x, rhs.y);
         return ( temp.x== rhsTemp.x ) && ( temp.y == rhsTemp.y );
    }
    
-    /* \brief
-     * add operator for vectors
-     * \details
-     * counts 2 vectors together, then returns a new vector with the new values.
-     */
+    /** \brief
+     ** add operator for vectors
+     ** \details
+     ** counts 2 vectors together, then returns a new vector with the new values.
+     **/
     vector operator+( const vector & rhs ){
         vector temp(x + rhs.x, y + rhs.y);
         return temp;
     }
     
-    /* \brief
-     * extended add operator for vectors
-     * \details
-     * adds the rhs vector values to the lhs vector.
-     */
+    /** \brief
+     ** extended add operator for vectors
+     ** \details
+     ** adds the rhs vector values to the lhs vector.
+     **/
     vector & operator+=( const vector & rhs ){
         x += rhs.x;
         y += rhs.y;
         return *this;
     }
     
-    /* \brief
-     * multiply operator for vectors
-     * \details
-     * multiplies vector by a given integer value, then returns a temp vector with the new values.
-     */
+    /** \brief
+     ** multiply operator for vectors
+     ** \details
+     ** multiplies vector by a given integer value, then returns a temp vector with the new values.
+     **/
     vector operator*( const int & rhs ){
         vector temp(x * rhs, y * rhs);
         return temp;
     }
     
-    /* \brief
-     * extended mutiply operator for vectors
-     * \details
-     * multiplies current vector with given integer.
-     */
+    /** \brief
+     ** extended mutiply operator for vectors
+     ** \details
+     ** multiplies current vector with given integer.
+     **/
     vector & operator*=( const int & rhs ){
         x = x * rhs;
         y = y * rhs;

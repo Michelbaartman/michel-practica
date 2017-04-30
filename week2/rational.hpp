@@ -125,6 +125,10 @@ public:
       return *this;
    }
    
+    /// \brief 
+    /// multiply this rational by a integer value
+    /// \details
+    /// this operator*= multiplies this rational value by a integer value.
    rational operator*=( const rational & rhs ){
       counter *= rhs.counter;
       denominator *= rhs.denominator;
